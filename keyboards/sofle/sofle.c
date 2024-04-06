@@ -68,10 +68,16 @@ void print_status_narrow(void) {
     oled_write_P(PSTR("\n\n"), false);
     switch (get_highest_layer(layer_state)) {
         case 0:
-            oled_write_ln_P(PSTR("Qwrt"), false);
+            oled_write_ln_P(PSTR("Qwrt\n Mac"), false);
             break;
         case 1:
-            oled_write_ln_P(PSTR("Clmk"), false);
+            oled_write_ln_P(PSTR("Clmk\n Mac"), false);
+            break;
+        case 5:
+            oled_write_ln_P(PSTR("Qwrt\n Win"), false);
+            break;
+        case 6:
+            oled_write_ln_P(PSTR("Game"), false);
             break;
         default:
             oled_write_P(PSTR("Mod\n"), false);
@@ -82,6 +88,8 @@ void print_status_narrow(void) {
     switch (get_highest_layer(layer_state)) {
         case 0:
         case 1:
+        case 5:
+        case 6:
             oled_write_P(PSTR("Base\n"), false);
             break;
         case 2:
@@ -89,6 +97,9 @@ void print_status_narrow(void) {
             break;
         case 3:
             oled_write_P(PSTR("Lower"), false);
+            break;
+        case 4:
+            oled_write_P(PSTR("Settings"), false);
             break;
         default:
             oled_write_ln_P(PSTR("Undef"), false);
