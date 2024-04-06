@@ -16,6 +16,9 @@
             {"pin_a": "F5", "pin_b": "F4", "resolution": 2}
         ]
     },
+    "dynamic_keymap": {
+        "layer_count": 6
+    },
     "split": {
         "encoder": {
             "right": {
