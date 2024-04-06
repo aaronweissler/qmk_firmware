@@ -73,10 +73,10 @@ void print_status_narrow(void) {
         case 1:
             oled_write_ln_P(PSTR("Clmk\nMac"), false);
             break;
-        case 4:
+        case 2:
             oled_write_ln_P(PSTR("Qwrt\nWin"), false);
             break;
-        case 5:
+        case 3:
             oled_write_ln_P(PSTR("Game\n"), false);
             break;
         default:
@@ -88,14 +88,14 @@ void print_status_narrow(void) {
     switch (get_highest_layer(layer_state)) {
         case 0:
         case 1:
-        case 4:
-        case 5:
+        case 2:
+        case 3:
             oled_write_P(PSTR("Base\n"), false);
             break;
-        case 2:
+        case 4:
             oled_write_P(PSTR("Raise"), false);
             break;
-        case 3:
+        case 5:
             oled_write_P(PSTR("Lower"), false);
             break;
         default:
