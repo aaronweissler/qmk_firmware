@@ -77,10 +77,10 @@ void print_status_narrow(void) {
             oled_write_ln_P(PSTR("Qwrt\nWin"), false);
             break;
         case 5:
-            oled_write_ln_P(PSTR("Game\n\n"), false);
+            oled_write_ln_P(PSTR("Game\n"), false);
             break;
         default:
-            oled_write_P(PSTR("Mod\n\n"), false);
+            oled_write_P(PSTR("Undefined\n"), false);
             break;
     }
     oled_write_P(PSTR("\n\n"), false);
