@@ -88,8 +88,8 @@ void print_status_narrow(void) {
     switch (get_highest_layer(layer_state)) {
         case 0:
         case 1:
+        case 4:
         case 5:
-        case 6:
             oled_write_P(PSTR("Base\n"), false);
             break;
         case 2:
